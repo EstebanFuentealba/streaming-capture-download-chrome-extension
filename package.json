@@ -1,0 +1,14 @@
+{
+  "name": "chrome-extension",
+  "scripts": {
+    "build": "./node_modules/.bin/gulp default"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-uglify": "^1.4.1"
+  }
+}

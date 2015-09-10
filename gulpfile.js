@@ -1,3 +1,7 @@
+/*
+* @author: Esteban Fuentealba <efuentealba@json.cl>
+*/
+
 var gulp        = require('gulp');
 var browserify  = require('gulp-browserify');
 var uglify      = require('gulp-uglify');

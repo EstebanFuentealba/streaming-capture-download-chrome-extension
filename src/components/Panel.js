@@ -1,3 +1,6 @@
+/*
+* @author: Esteban Fuentealba <efuentealba@json.cl>
+*/
 import React from 'react';
 import Select from 'react-select';
 import {M3U} from "playlist-parser";

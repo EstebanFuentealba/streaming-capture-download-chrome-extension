@@ -1,3 +1,6 @@
+/*
+* @author: Esteban Fuentealba <efuentealba@json.cl>
+*/
 import {M3U} from "playlist-parser";
 
 var blobs = [];

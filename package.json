@@ -1,6 +1,6 @@
 {
   "name": "chrome-extension",
-  "main": "app.js",
+  "author": "Esteban Fuentealba <efuentealba@json.cl>",
   "scripts": {
     "build": "./node_modules/.bin/gulp default"
   },
@@ -14,5 +14,10 @@
     "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
     "gulp-uglify": "^1.4.1"
+  }, 
+  "description": "Capture and download video streaming",
+  "repository": {
+   "type": "git",
+   "url": "https://github.com/EstebanFuentealba/streaming-capture-download-chrome-extension/"
   }
 }

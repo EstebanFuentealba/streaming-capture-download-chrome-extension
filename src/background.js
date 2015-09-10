@@ -119,5 +119,4 @@ function fnOnDownload() {
   a.style.display = 'none';
   document.body.appendChild(a);
   a.click();
-  downloadURL = false;
 }

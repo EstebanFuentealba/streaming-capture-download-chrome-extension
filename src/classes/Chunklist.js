@@ -1,3 +1,6 @@
+/*
+* @author: Esteban Fuentealba <efuentealba@json.cl>
+*/
 import List from './List';
 export default class Chunklist extends List {
   constructor(props) {

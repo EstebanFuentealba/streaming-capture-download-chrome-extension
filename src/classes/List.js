@@ -1,3 +1,6 @@
+/*
+* @author: Esteban Fuentealba <efuentealba@json.cl>
+*/
 import {M3U} from "playlist-parser";
 export default class List {
   constructor(props) {

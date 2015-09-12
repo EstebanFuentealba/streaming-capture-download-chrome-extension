@@ -1,3 +1,6 @@
+/*
+* @author: Esteban Fuentealba <efuentealba@json.cl>
+*/
 import {M3U} from "playlist-parser";
 import validUrl from 'valid-url';
 import url from 'url';
@@ -13,9 +16,7 @@ export default class Streaming {
     this.Writer = null;
     this.chunklist_url;
     this.callback         = callback;
-    //this.blobs            = [];
     this.urls             = [];
-    //this.chuckCount       = 0;
     this.chuck_urls       = [];
     this.playlist;
     this.chunklist;
@@ -50,10 +51,6 @@ export default class Streaming {
         });
         me.callback(me);
       });
-      /*
-      let arrVars = quality.item.file.split("/");
-      let lastVar = arrVars.pop();
-      me.chunklist_url = arrVars.join("/");*/
 
     }
   }
@@ -74,15 +71,12 @@ export default class Streaming {
 
   }
   download() {
-    //console.log("Downloading...");
     let me = this;
     let downloadURL = me.urls[me.Writer.chunkCount];
     if(!validUrl.isUri(downloadURL)) {
-      //console.log("download is not URL")
       downloadURL = this.createURL() + downloadURL;
     }
     Request.downloadBlob(downloadURL,function(blob){
-      //me.blobs.push(blob);
       me.Writer.write(blob);
       if(me.Writer.hasNext()) {
         me.download();

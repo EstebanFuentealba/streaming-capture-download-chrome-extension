@@ -1,3 +1,6 @@
+/*
+* @author: Esteban Fuentealba <efuentealba@json.cl>
+*/
 import List from './List';
 export default class Playlist extends List {
   constructor(props) {
@@ -8,7 +11,6 @@ export default class Playlist extends List {
     let metas = [];
     this.list.map((item) => {
       if (typeof item !== 'undefined' && item.hasOwnProperty('title')){
-        console.log(item);
         var _metadata = item.title.match(this.DATA_STREAMING);
         if(_metadata && _metadata.length == 7) {
           let [raw , programId, bandwith, width, height] = _metadata;

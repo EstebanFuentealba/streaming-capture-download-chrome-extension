@@ -1,4 +1,6 @@
-
+/*
+* @author: Esteban Fuentealba <efuentealba@json.cl>
+*/
 export default class Writer {
   constructor(props) {
     let {chunkTotal, fileName} = props;
@@ -40,10 +42,6 @@ export default class Writer {
 
   			me.fileWriter.onerror = (e) => {
           console.log(e);
-  				/*if (this.instance == dl_instance) {
-  					dl_writing = false;
-  					dl_write_failed(e);
-  				}*/
   			}
 
   			me.fileWriter.onwriteend = () => {

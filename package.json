@@ -1,23 +1,28 @@
 {
   "name": "chrome-extension",
   "author": "Esteban Fuentealba <efuentealba@json.cl>",
+  "main": "app.js",
   "scripts": {
     "build": "./node_modules/.bin/gulp default"
   },
   "dependencies": {
+    "mongodb": "^2.0.42",
+    "mongoose": "^4.1.6",
     "playlist-parser": "0.0.12",
     "react": "^0.13.3",
-    "react-select": "^0.6.7"
+    "react-select": "^0.6.7",
+    "valid-url": "^1.0.9",
+    "walk": "^2.3.9"
   },
   "devDependencies": {
     "babelify": "^6.3.0",
     "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
     "gulp-uglify": "^1.4.1"
-  }, 
+  },
   "description": "Capture and download video streaming",
   "repository": {
-   "type": "git",
-   "url": "https://github.com/EstebanFuentealba/streaming-capture-download-chrome-extension/"
+    "type": "git",
+    "url": "https://github.com/EstebanFuentealba/streaming-capture-download-chrome-extension/"
   }
 }

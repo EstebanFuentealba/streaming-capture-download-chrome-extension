@@ -13,6 +13,8 @@ $ npm run build
 ```
 Cargar la extensión descomprimida en google chrome (carpeta build/)
 
+## Use
+En la pestaña donde se encuentre el video presiona el botón capturar de la extension que se encuentra al lado de la barra de direcciones, la página se recargará, capturará los archivos y después de un momento descargará el archivo.
 
 ## TODO
 - [x] Multidescarga

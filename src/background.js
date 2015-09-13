@@ -7,14 +7,19 @@ import Streaming from './classes/Streaming';
 
 var tabCapture = null;
 
+
 chrome.browserAction.onClicked.addListener(function() {
   tabCapture = null;
+
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     tabCapture = tabs[0];
+
+
     chrome.tabs.reload(tabCapture.id, {bypassCache:false}, function() {
       console.log("reloaded");
       chrome.webRequest.onCompleted.addListener(function(details) {
         if(details.tabId === tabCapture.id){
+          chrome.tabs.sendMessage(details.tabId, {});
           let link_m3u8= Streaming.catchM3U8(details.url);
           if(link_m3u8 !== false) {
             chrome.tabs.getSelected(null,function(tab) {

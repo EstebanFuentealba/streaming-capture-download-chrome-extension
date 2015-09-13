@@ -12,3 +12,13 @@ Generar la extension
 $ npm run build
 ```
 Cargar la extensión descomprimida en google chrome (carpeta build/)
+
+
+## TODO
+- [x] Multidescarga
+- [x] Descargar archivos con peso mayor a 500mb
+- [ ] Sincronizar la descarga con la escritura de archivo (metodo asyncronico onwriteend)
+- [ ] Agregar un icono a la barra de direcciones para ver el estado de la captura o descarga
+- [ ] Posibilidad de pausar o cancelar descargas
+- [ ] Después de descargar archivos limpiar cache, memoria y destruir objetos
+- [ ] agregar la posibilidad de capturar archivos smil

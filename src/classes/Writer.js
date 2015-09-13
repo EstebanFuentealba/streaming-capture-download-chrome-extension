@@ -67,6 +67,9 @@ export default class Writer {
     a.style.display = 'none';
     document.body.appendChild(a);
     a.click();
+    /*this.fileEntry.remove(function() {
+      console.log('File removed.');
+    }, this.errorHandler);*/
   }
   write(blob) {
     try{

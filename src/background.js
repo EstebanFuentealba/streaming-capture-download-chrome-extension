@@ -1,9 +1,7 @@
 /*
 * @author: Esteban Fuentealba <efuentealba@json.cl>
 */
-/*
-import {M3U} from "playlist-parser";
-import Request from './classes/Request';*/
+import url from 'url';
 import Streaming from './classes/Streaming';
 
 
@@ -19,12 +17,16 @@ chrome.browserAction.onClicked.addListener(function() {
         if(details.tabId === tabCapture.id){
           let link_m3u8= Streaming.catchM3U8(details.url);
           if(link_m3u8 !== false) {
+            chrome.tabs.getSelected(null,function(tab) {
+              let tmpFileName = url.parse(tab.url);
               let streaming = new Streaming({
                 tab_id: details.tabId,
-                playlist_url: link_m3u8
+                playlist_url: link_m3u8,
+                fileName: tmpFileName.pathname.replace(/\//g,"_") + '.ts'
               },function(streaming) {
                 streaming.download();
               });
+            });
           }
         }
         return {};

@@ -11,7 +11,8 @@ import Writer from './Writer';
 export default class Streaming {
 
   constructor(props, callback) {
-    let {playlist_url, tab_id} = props;
+    let {playlist_url, tab_id, fileName} = props;
+    this.fileName = fileName || 'video.ts';
     this.playlist_url     = playlist_url;
     this.Writer = null;
     this.chunklist_url;
@@ -47,7 +48,7 @@ export default class Streaming {
         me.urls = me.chunklist.getLinks();
         me.Writer = new Writer({
           chunkTotal: me.urls.length,
-          fileName: 'prueba.ts'
+          fileName: me.fileName
         });
         me.callback(me);
       });

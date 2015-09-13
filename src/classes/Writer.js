@@ -69,8 +69,14 @@ export default class Writer {
     a.click();
   }
   write(blob) {
-    this.fileWriter.write(blob);
+    try{
+      this.fileWriter.write(blob);
+
+    } catch(e){
+      console.log(e);
+    }
     this.chunkCount++;
+
   }
   hasNext() {
 

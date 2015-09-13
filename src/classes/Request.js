@@ -1,3 +1,6 @@
+/*
+* @author: Esteban Fuentealba <efuentealba@json.cl>
+*/
 export default class Request {
   static downloadBlob(url, onSuccess) {
     Request.get(url,'arraybuffer', function(response) {
